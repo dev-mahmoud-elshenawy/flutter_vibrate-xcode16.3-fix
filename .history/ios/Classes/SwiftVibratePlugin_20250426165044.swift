@@ -14,9 +14,9 @@ public class SwiftVibratePlugin: NSObject, FlutterPlugin {
           case "canVibrate":
             #if targetEnvironment(simulator)
             result(false)
-            #else
+#else
             result(true)
-            #endif
+#endif
           case "vibrate":
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             // Feedback

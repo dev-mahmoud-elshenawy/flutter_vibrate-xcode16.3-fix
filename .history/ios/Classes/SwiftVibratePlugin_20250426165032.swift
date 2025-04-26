@@ -12,11 +12,11 @@ public class SwiftVibratePlugin: NSObject, FlutterPlugin {
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
       switch (call.method) {
           case "canVibrate":
-            #if targetEnvironment(simulator)
+#if targetEnvironment(simulator)
             result(false)
-            #else
+#else
             result(true)
-            #endif
+#endif
           case "vibrate":
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             // Feedback
